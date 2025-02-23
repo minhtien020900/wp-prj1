@@ -1,0 +1,365 @@
+/*!
+Theme Name: Pubnews Plus
+Theme URI: https://blazethemes.com/theme/pubnews-free/
+Author: BlazeThemes
+Author URI: https://blazethemes.com/
+Description: Pubnews Plus is an exceptional news theme designed to satisfy all your requirements. It is customizer-based as well as fully compatible with Elementor builder.  Pubnews theme offers extensive customization options for the header, footer, inner pages, and any part of the website. You will greatly enjoy diving into its live customizer, which incorporates all WordPress possibilities, such as post query parameters, real-time preview, expanded typography, and extensive style modification options. With a top-notch and intuitive design, this theme gives your website a professional news/magazine appearance. It includes six news layouts that can be customized at a granular level and added to any section as many times as you want. If you prefer creating your website with Elementor, we highly recommend you to use the theme with News Kit Elementor Addons plugin. With News Kit Elementor Addons and Elementor integrated into your website, Pubnews theme offers limitless possibilities in the world of drag and drop page building. Alternatively, if you don’t have any time to spare on building pages, you can easily import pre-built starter sites with a single click. No hassle! No complexity! Check out all the pre-built starter websites here https://blazethemes.com/theme/pubnews-free
+Version: 1.0.0
+Tested up to: 6.5
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pubnews-plus
+Template: pubnews
+Tags: news, blog, entertainment, one-column, two-columns, grid-layout, block-styles, left-sidebar, right-sidebar, custom-header, flexible-header, custom-background, custom-colors, custom-menu, featured-images, full-width-template, post-formats, sticky-post, rtl-language-support, footer-widgets, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Pubnews is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+
+
+figure {
+    margin: 0px;
+}
+
+/**
+Variables
+**/
+:root {
+		/* presets */
+		--pubnews-newsletter-color: #ffffff;
+		--pubnews-global-preset-theme-color: #cf2e2e;
+		--social-icon-bk-color: #ffffff;
+		--social-icon-size: 16px;
+		--menu-color: #161616;
+		--search-color: #161616;
+
+		--sidebar-toggle-color: #161616;
+		--mobile-menu-bk-color: #ffffff;
+
+	}
+
+.pubnews_dark_mode { 
+		--pubnews-newsletter-color: #ffffff;
+		--sidebar-toggle-color: #777777;
+		--mobile-menu-bk-color: #000000;
+	}
+
+
+
+
+
+.site-header.layout--default .newsletter-element a {
+    color: var(--pubnews-newsletter-color);
+    
+
+    box-shadow: 0 2px 7px -4px rgba(0, 0, 0, .16);
+    -moz-box-shadow: 0 2px 7px -4px rgba(0, 0, 0, .16);
+    -webkit-box-shadow: 0 2px 7px -4px rgba(0, 0, 0, .16);
+}
+
+.site-header.layout--default.layout--one .newsletter-element a {
+	padding: 4px 13px 8px;
+}
+
+.site-header.layout--default .social-icons-wrap .social-icon {
+	color: #161616;
+	border: 1px solid rgba(0, 0, 0, .09);
+}
+
+.pubnews_dark_mode .site-header.layout--default .social-icons-wrap .social-icon { 
+	color: #ffffff;
+}
+
+.site-header.layout--default .social-icons-wrap .social-icon:hover {
+	color: var(--pubnews-global-preset-theme-color);
+}
+
+.site-header.layout--default .social-icons-wrap .social-icon {
+	width: 35px;
+	height: 35px;
+}
+
+.site-header.layout--default.layout--one .menu-section {
+	border-top: 1px solid #efefef;
+}
+
+#pubnews_menu_burger span {
+	background-color: #161616;
+}
+
+.pubnews_dark_mode #pubnews_menu_burger span {
+	background-color: #777777;
+}
+
+@media (max-width: 769px) {
+    nav.main-navigation ul.menu li, nav.main-navigation ul.nav-menu li {
+        border-bottom: 1px solid #d2d2d2;
+    }
+
+    nav.main-navigation ul.menu li a, nav.main-navigation ul.nav-menu li a {
+    	color: #000000;
+    }
+
+    body .site-header .main-navigation ul.menu ul, body .site-header .main-navigation ul.nav-menu ul {
+        background-color: #fff !important;
+    }
+
+}
+
+
+@media (min-width: 48.1em) {
+    .main-navigation .menu li a, .main-navigation .nav.menu li a {
+        padding: 8px 15px;
+   }
+
+   .main-navigation .menu li:hover > a, .main-navigation .nav.menu li:hover > a {
+        color: var(--pubnews-global-preset-theme-color);
+   }
+ }
+
+
+
+.main-banner-wrap .slick-arrow i {
+	padding: 2px 14px 0; 
+}
+
+
+
+@media (max-width: 500px) {
+
+		.main-banner-wrap .post-element .post-excerpt {
+			display: none;
+		}
+
+		.banner-layout--three .main-banner-slider .post-title {
+			font-size: 1.6rem;
+			line-height: 30px;
+		}
+	}
+
+@media (min-width: 48.1em) {
+    .main-navigation ul.menu ul li a, .main-navigation ul.nav-menu ul li a {
+    	color: #000;
+    	border-bottom: 1px solid #dedede;
+    }
+
+    .pubnews_dark_mode .main-navigation ul.menu ul li a, .pubnews_dark_mode .main-navigation ul.nav-menu ul li a {
+    	border-bottom: 1px solid #595959;
+    }
+
+}
+
+nav.main-navigation ul > li ul {
+    border-top: 1px solid #dedede;
+}
+
+.pubnews_dark_mode nav.main-navigation ul > li ul {
+    border-top: 1px solid #595959;
+}
+
+/* Banner Layout Three */
+		.banner-layout--three .pubnews-container .row:first-child {
+			display: grid;
+			grid-template-columns: 54%46%;
+		}
+
+		.banner-layout--three .main-banner-wrap {
+			padding-right: 1px;
+		}
+
+		/* .banner-layout--three .slick-list article, */
+		.banner-layout--three .slick-list article .post-thumb {
+			height: 444px;
+		}
+
+		.banner-layout--three .slick-list article .post-thumb img {
+			height: 100%;
+		}
+
+		.banner-layout--three .main-banner-wrap .no-feat-img figure.post-thumb,
+		.banner-layout--three .banner-trailing-posts .no-feat-img figure.post-thumb {
+			background-color: var(--noimg-bk-color);
+		}
+
+
+		.banner-layout--three .main-banner-block-posts {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -1px;
+			padding-left: 1px;
+			height: 444px;
+		}
+
+		.banner-layout--three .post-meta span.post-date:before,
+		.banner-layout--three .post-meta .post-date time,
+		.banner-layout--three .post-excerpt {
+			color: var(--white-text);
+		}
+
+		.banner-layout--three .main-banner-block-posts article:first-child {
+			flex: 0 1 100%;
+			height: 251px;
+			margin-bottom: 2px;
+		}
+
+		.banner-layout--three .banner-trailing-posts article {
+			flex: 0 1 50%;
+			padding: 0 1px;
+			position: relative;
+			height: 191px;
+		}
+
+		.banner-layout--three .main-banner-block-posts article.no-feat-img {
+			min-height: 210px;
+		}
+
+		.banner-layout--three .main-banner-block-posts article img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.banner-layout--three .banner-trailing-posts .post-element {
+			position: absolute;
+			bottom: 0;
+			background-image: linear-gradient(to top, #1a1919, transparent);
+			width: calc( 100% - 2px );
+			padding: 20px 20px 16px;
+			z-index: 1;
+		}
+
+		.banner-layout--three .main-banner-block-posts article:first-child .post-title {
+			font-size: calc(var(--post-title-size) * 0.98);
+			line-height: calc(var(--post-title-lineheight) * 1.4);
+		}
+
+		.banner-layout--three .banner-trailing-posts .post-title {
+			margin: 11px 0 0;
+			font-size: calc(var(--post-title-size) * 0.76);
+			line-height: calc(var(--post-title-lineheight) * 1.1);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+		}
+
+		.banner-layout--three .banner-trailing-posts .post-title a {
+			color: var(--white-text);
+		}
+
+		.site-header.layout--default .header-right-button-wrap span.title-text {
+		    font-size: calc(var(--menu-size)* 0.8);
+		    letter-spacing: 1px;
+		    text-transform: uppercase;
+		    font-weight: 500;
+		}
+
+		.banner-layout--three .banner-trailing-posts figure {
+		    height: 100%;
+		}
+
+		@media(max-width: 584px) {
+			.banner-layout--three .slick-list article .post-thumb {
+				height: 372px;
+			}
+		}
+
+/** overiding css **/
+.post-categories a, .widget .post-categories a {
+    text-decoration: none;
+    color: var(--white-text);
+   }
+
+.post-title a:visited {
+	color: inherit;
+}
+
+.widget {
+    margin-bottom: 40px;
+}
+
+.main-navigation ul .sub-menu {
+	box-shadow: none;
+}
+
+.banner-layout--three .main-banner-block-posts.banner-trailing-posts article.no-feat-img {
+    min-height: 191px;
+}
+
+.widget .wp-block-image img {
+	 overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0px 4px 9px -3px rgb(7 10 25 / 35%);
+    -webkit-box-shadow: 0px 4px 9px -3px rgb(7 10 25 / 35%);
+    -moz-box-shadow: 0px 4px 9px -3px rgb(7 10 25 / 35%);
+}
+
+.widget_pubnews_ads_slider_widget figure{
+	height: 380px;
+}
+
+.widget_pubnews_ads_slider_widget figure img {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0px 4px 9px -3px rgb(7 10 25 / 35%);
+    -webkit-box-shadow: 0px 4px 9px -3px rgb(7 10 25 / 35%);
+    -moz-box-shadow: 0px 4px 9px -3px rgb(7 10 25 / 35%);
+}
+
+.widget_pubnews_ads_slider_widget .pubnews-advertisement-block {
+	height: 100%;
+}
+
+
+.widget.widget_pubnews_ads_slider_widget .slick-arrow i {
+	line-height: 16px;
+    border: none;
+    border-radius: 50%;
+    -webkit-transition: 0.5s ease;
+    transition: 1s ease;
+    color: #000;
+    background-color: var(--white-text);
+}
+
+.widget.widget_pubnews_ads_slider_widget .slick-arrow {
+	transition: all .25s cubic-bezier(.02,.01,.47,1);
+}
+
+
+.widget.widget_pubnews_ads_slider_widget .slick-arrow.slick-prev:hover {
+	transform: translateX(-2px);
+}
+
+.widget.widget_pubnews_ads_slider_widget .slick-arrow.slick-next:hover {
+	transform: translateX(2px);
+}
+
+
+
+/** 1025 **/
+@media (max-width: 1025px) {
+    body .pubnews-section.banner-layout--three .pubnews-container .row:first-child, .banner-layout--four .row:first-child, .single-related-posts-section-wrap.layout--list .single-related-posts-wrap {
+        grid-template-columns: 100%;
+    }
+
+    .banner-layout--three .pubnews-container .row:first-child .main-banner-wrap {
+        margin-bottom: 2px;
+    }
+}
+
+
+.widget .wp-block-categories-list li, .widget .wp-block-categories-list li {
+	font-size: inherit;
+}
+
